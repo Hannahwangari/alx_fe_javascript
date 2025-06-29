@@ -6,7 +6,7 @@ const quotes = [
 ];
 
 // Show a random quote from the array
-function showRandomQuote() {
+function displayRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const quote = quotes[randomIndex];
   const quoteDisplay = document.getElementById("quoteDisplay");
@@ -20,7 +20,7 @@ function addQuote() {
 
   if (text && category) {
     quotes.push({ text, category });
-    showRandomQuote(); // Optional: display the new quote
+    displayRandomQuote(); // 🔄 Updated here
     document.getElementById("newQuoteText").value = "";
     document.getElementById("newQuoteCategory").value = "";
   } else {
@@ -55,9 +55,9 @@ function createAddQuoteForm() {
 
 // Setup event listeners and show first quote on load
 window.onload = function () {
-  showRandomQuote();
+  displayRandomQuote(); // 🔄 Updated here
   createAddQuoteForm();
 
   const newQuoteButton = document.getElementById("newQuote");
-  newQuoteButton.addEventListener("click", showRandomQuote);
+  newQuoteButton.addEventListener("click", displayRandomQuote); // 🔄 Updated here
 };
