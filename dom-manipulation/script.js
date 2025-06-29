@@ -26,7 +26,7 @@ function addQuote() {
     quotes.push({ text, category });
     document.getElementById("newQuoteText").value = "";
     document.getElementById("newQuoteCategory").value = "";
-    alert("Quote added successfully!");
+    displayRandomQuote(); // ✅ required to update DOM after adding
   } else {
     alert("Please enter both quote text and category.");
   }
@@ -37,4 +37,4 @@ newQuoteBtn.addEventListener("click", displayRandomQuote);
 addQuoteBtn.addEventListener("click", addQuote);
 
 // Show a quote on initial load
-displayRandomQuote(); // ✅ This now matches the function name
+displayRandomQuote();
