@@ -205,7 +205,7 @@ function syncQuotes() {
     .then(res => res.json())
     .then(data => {
       console.log("Quotes synced:", data);
-      showConflictNotification("Quotes synced with server.");
+      showConflictNotification("Quotes synced with server!");
     })
     .catch(err => console.error("Sync error:", err));
 }
