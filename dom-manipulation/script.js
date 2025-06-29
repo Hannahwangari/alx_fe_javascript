@@ -37,4 +37,4 @@ newQuoteBtn.addEventListener("click", displayRandomQuote);
 addQuoteBtn.addEventListener("click", addQuote);
 
 // Show a quote on initial load
-showRandomQuote();
+displayRandomQuote(); // ✅ This now matches the function name
