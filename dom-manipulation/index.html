@@ -2,27 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dynamic Quote Generator</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Dynamic Quote Generator</h1>
+  <div class="container">
+    
+    <h1>Dynamic Quote Generator</h1>
 
-  <!-- Filter Dropdown -->
-  <label for="categoryFilter">Filter by Category:</label>
-  <select id="categoryFilter" onchange="filterQuotes()">
-    <option value="all">All Categories</option>
-  </select>
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <label class="category-label" for="categoryFilter">Filter by Category:</label>
+      <select id="categoryFilter"></select>
+    </section>
 
-  <!-- Quote Display -->
-  <div id="quoteDisplay" style="margin: 1em 0; font-style: italic;"></div>
+    
+<!-- Quote Display -->
+<section class="quote-display-block">
+  <div id="quoteDisplay" aria-live="polite"></div>
+</section>
+   
 
-  <!-- Show Random Quote Button -->
-  <button id="newQuote">Show New Quote</button>
+<!-- Combined Input + Buttons Block -->
+<section class="quote-action-block">
+  <form id="quoteForm">
+    <input type="text" id="newQuoteText" placeholder="Enter a new quote" required />
+    <input type="text" id="newQuoteCategory" placeholder="Enter quote category" required />
+    <div class="button-row">
+      <button id="newQuote" type="button">Show New Quote</button>
+      <button id="addQuoteBtn" type="submit">Add Quote</button>
+    </div>
+  </form>
+</section>
 
-  <!-- Form, Import/Export Buttons added by JS -->
 
-  <!-- JavaScript -->
+
+
+
+    <!-- Export & Import Block -->
+    <section class="file-section">
+      <button id="exportQuotes">Export Quotes</button>
+      <label for="importFile" class="file-label">Import Quotes (JSON)</label>
+      <input type="file" id="importFile" accept=".json" />
+    </section>
+
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

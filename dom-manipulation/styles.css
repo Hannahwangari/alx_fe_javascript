@@ -1,0 +1,276 @@
+/* Reset & Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background: linear-gradient(to right, #15a5b8, #f1f8e9);
+  color: #333;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Headline */
+h1 {
+  font-size: 2.5rem;
+  color:  #004d40;
+  text-align: center;
+}
+
+/* Section Spacing */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Category Filter Label */
+.category-label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Inputs and Select */
+input[type="text"],
+select {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote Box */
+#quoteDisplay {
+  font-size: 1.3rem;
+  font-style: italic;
+  padding: 20px;
+  border-left: 4px solid #00796b;
+  background: #ffffffee;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  line-height: 1.6;
+  transition: all 0.3s ease-in-out;
+}
+
+#quoteDisplay:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Shared Quote Card Style */
+.quote-action-block,
+.quote-input-block,
+.action-button-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Form inside quote-action-block */
+.quote-action-block form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.quote-action-block input[type="text"],
+.quote-input-block input[type="text"] {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Row */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button-row button {
+  flex: 1 1 45%;
+  min-width: 120px;
+  max-width: 200px;
+}
+
+/* Buttons */
+button,
+#addQuoteBtn {
+  background-color: #00796b;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+#addQuoteBtn:hover {
+  background-color: #004d40;
+  transform: scale(1.03);
+}
+
+/* Delete Button */
+button.delete-btn {
+  background-color: #078467;
+  margin-top: 0.5rem;
+}
+
+button.delete-btn:hover {
+  background-color: #1ceaba;
+}
+
+/* Disabled Button */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Display Section Button Alignment */
+.display-section button {
+  align-self: flex-start;
+}
+
+/* Form Section (injected by JS) */
+.form-section .form-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* File Section */
+.file-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow:  0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* File Upload Button */
+.file-section button,
+.file-label {
+  background-color: #ff9800; 
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.file-section button:hover,
+.file-label:hover {
+  background-color:  #004d40;
+  transform: scale(1.03);
+}
+
+/* Styled File Input */
+.file-section input[type="file"] {
+  background-color: #f5f5f5;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  max-width: 300px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.file-section input[type="file"]:hover {
+  border-color: #999;
+}
+
+/* Hide the native file input */
+#importFile {
+  display: none;
+}
+
+/* Notification Box */
+.notification {
+  background-color: #fff3cd;
+  color: #937006;
+  border: 1px solid #ffeeba;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 600px;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Fade‑in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  #quoteDisplay,
+  .notification {
+    font-size: 1rem;
+  }
+  .display-section button {
+    align-self: stretch;
+  }
+  input[type="text"],
+  select {
+    max-width: 100%;
+  }
+}
